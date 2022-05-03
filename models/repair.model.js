@@ -2,7 +2,7 @@ const {DataTypes} = require('sequelize');
 const {sequelize} = require('../util/database');
 
 
-const Repairs = sequelize.define('repair',{
+const Repair = sequelize.define('repair',{
     id:{
         primaryKey:true,
         type: DataTypes.INTEGER,
@@ -10,18 +10,18 @@ const Repairs = sequelize.define('repair',{
         allowNull: false,
     },
     date: {
-        type: DataTypes.STRING(20),
+        type: DataTypes.DATE,
         allowNull: false,
     },
     status: {
         type: DataTypes.STRING(10),
         allowNull: false,
-        defaultValue: 'active',
+        defaultValue: 'pending',
     },
-    userid: {
+    userId: {
         type: DataTypes.INTEGER,
         allowNull: false,
     },
 });
 
-module.exports = {Repairs};
+module.exports = {Repair};

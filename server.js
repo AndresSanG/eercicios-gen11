@@ -1,6 +1,6 @@
 const {app} = require('./app');
 const {sequelize} = require('./util/database');
-
+ 
 
 
 sequelize.authenticate()

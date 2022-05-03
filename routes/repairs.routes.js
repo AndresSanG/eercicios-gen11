@@ -5,9 +5,9 @@ const {
 	getAllRepairs,
 	getRepairById,
 	createNewRepair,
-	updateRepair,
-	deleteRepair,
-} = require('../controllers/repair.controller');
+	repairCompleated,
+	cancelRepair,
+} = require('../controllers/repairs.controllers');
 
 
 
@@ -19,9 +19,9 @@ router.get('/:id', getRepairById);
 
 router.post('/',createNewRepair );
 
-router.patch('/:id', updateRepair);
+router.patch('/:id', repairCompleated);
 
-router.delete('/:id', deleteRepair);
+router.delete('/:id', cancelRepair);
 
 
-module.exports = { usersRouter: router };
+module.exports = { repairsRouter: router };
